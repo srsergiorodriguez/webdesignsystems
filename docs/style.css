@@ -1,0 +1,292 @@
+
+/* Variables */
+:root {
+  --colbg: #F3F7F4;
+  --colmain: #ed6a5a;
+  --colblack: #313030;
+  --col1: #5ca4a9;
+  --col2: #9bc1bc;
+
+  --mainhfont: 'Libre Baskerville', serif;
+  --headfont: 'Libre Baskerville', serif;
+  --contentfont: 'Noto Serif SC', serif;
+
+  --ttime: 0.5s;
+}
+
+body {
+  padding:0;
+  margin:0;
+  background: var(--colbg);
+  font-family: var(--contentfont);
+  font-size: 1.08em;
+}
+
+#general {
+  max-width: 1300px;
+}
+
+/* Header section */
+
+.topset {
+  font-family: var(--mainhfont);
+  color: var(--colblack);
+}
+
+/* Header rect */
+
+.topheader {
+  text-align:center;
+  background: var(--colmain);
+}
+
+.mainh h1:before {
+  color:var(--colbg);
+  content: "\2772 \0020";
+}
+
+.mainh h1:after {
+  color: var(--colbg);
+  content: "\0020\2773";
+}
+
+.mainh h1 {
+  font-size: 2em;
+  font-weight: 700;
+  padding:1em 0em 0.3em 0em;
+  margin:0;
+}
+
+.mainh h2 {
+  font-weight: 400;
+  font-size: 1.1em;
+  padding:0;
+  margin:0;
+}
+
+/* Header menu */
+
+.titlebar1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0em 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titlebar1 li a {
+  padding: .3em 0.5em;
+  display: block;
+}
+
+.titlebar1 li a:hover {
+  background: grey;
+  cursor: pointer;
+}
+
+/* Top navbar section */
+
+nav {
+  margin-top: 0.1em;
+  background: var(--col1);
+}
+
+.navbar1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar1 li a {
+  margin: 0em .5em;
+  padding: .5em 1em;
+  display: block;
+  text-decoration: underline;
+  text-decoration-color: var(--colbg);
+  transition: var(--ttime);
+}
+
+.navbar1 li a:hover {
+  background: var(--col2);
+  cursor: pointer;
+}
+
+/* Main setting section */
+
+.mainset {
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr;
+  grid-gap: 1em;
+  margin: 1em;
+}
+
+/* Left sidebar section */
+
+.sidebar1 {
+  box-sizing: border-box;
+  list-style-type: circle;
+  font-family: var(--mainhfont);
+  font-weight: 400;
+  padding: 0 0 0 1em;
+}
+
+.sidebar1 ul {
+  padding: 0 1em;
+}
+
+.sidebar1 ul ul {
+  padding: 0 1em;
+}
+
+.sidebar1 li a {
+  font-size: 0.9em;
+  padding: 0 0.5em 0.1em 0;
+  display: block;
+  color: var(--colblk);
+  cursor: pointer;
+  transition: var(--ttime);
+  text-decoration: none;
+  text-decoration-color: var(--colbg);
+}
+
+.sidebar1 li a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--col1);
+}
+
+/* Content section */
+
+.chapter {
+  padding: 0em 1em 0em 1.5em;
+}
+
+.chapter p {
+  line-height: 1.6em;
+}
+
+.chapterh {
+  color: var(--colblk);
+  font-family: var(--mainhfont);
+  margin:0;
+}
+
+.chapterh h1:before {
+  color:var(--col1);
+  content: "\2772 \0020";
+}
+
+.chapterh h1:after {
+  color: var(--col1);
+  content: "\0020\2773";
+}
+
+.chapterh h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  padding: 1em 0em 0em 0em;
+  margin:0;
+  text-decoration: underline;
+  text-decoration-color: var(--colmain);
+}
+
+.chapterh h2 {
+  font-weight: 400;
+  font-size: 1.1em;
+  padding: 0;
+  margin: 0;
+}
+
+.chapterh h3:before {
+  color:var(--col1);
+  content: "\25A7 \0020";
+}
+
+.chapterh h3:after {
+  color: var(--col1);
+  content: "\0020\25A8";
+}
+
+.chapterh h3 {
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.canvasdiv {
+  text-align: center;
+}
+
+/* Right sidebar section */
+
+.sidebar2 {
+  box-sizing: border-box;
+  font-family: var(--contentfont);
+  color: var(--colblk);
+  font-size: 0.8em;
+  font-weight: 400;
+  padding: 0 0 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sidebar2 p {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar2 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Canvas sections */
+
+/* Tooltip sections */
+.tooltip1 {
+  cursor: help;
+  position: relative;
+  border-bottom: 1px dotted black;
+  border-bottom-color: var(--col1);
+}
+
+.tooltip1 .tooltip1-content {
+  position: absolute;
+  visibility: hidden;
+  width: 300px;
+  background: white;
+  border: solid 1px var(--col1);
+  padding: 0.5em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.tooltip1:hover .tooltip1-content {
+  visibility: visible;
+}
+
+/* Footer section */
+
+footer {
+  border: solid 1px lightgrey;
+  display: flex;
+  justify-content:space-around;
+}
+
+footer p {
+  padding: .1em .5em;
+  font-size: 0.8em;
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .mainset {
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+  }
+}
